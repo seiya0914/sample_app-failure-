@@ -1,8 +1,7 @@
-require 'test_helper'
+module SessionsHelper
 
-class ApplicationHelperTest < ActionView::TestCase
-  test "full title helper" do
-    assert_equal full_title,"Ruby on Rails Tutorial Sample App"
-    assert_equal full_title("Help"), "Help | Ruby on Rails Tutorial Sample App"
+  # 渡されたユーザーでログインする
+  def log_in(user)
+    session[:user_id] = user.id
   end
 end
